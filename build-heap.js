@@ -1,4 +1,4 @@
-// change this to no delete items
+// change this to not delete items
 
 class MinHeap {
   constructor() {
