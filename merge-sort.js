@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 /*
 Time Complexity:
   O(n * log(n)).
@@ -11,8 +12,8 @@ Time Complexity:
   .
   .
   .
-  At a height of log(n), there will be O(n) arrays of size 1 and it will take O(n) time to merge them.
-  This makes the overall time complexity equal to O(n * log(n)).
+  At a height of log(n), there will be O(n) arrays of size 1 and it will take O(n) time to merge
+  them. This makes the overall time complexity equal to O(n * log(n)).
 
 Auxiliary Space Used:
     O(n).
@@ -31,7 +32,7 @@ function merge(leftArr, rightArr) {
   let j = 0;
 
   while (i < leftArr.length && j < rightArr.length) {
-    if (leftArr[i] < rightArr[j]) {
+    if (leftArr[i] <= rightArr[j]) {
       results.push(leftArr[i]);
       i++;
     } else {
