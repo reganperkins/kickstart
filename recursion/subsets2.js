@@ -1,6 +1,8 @@
+/* eslint-disable no-unused-vars */
 /*
 90. Subsets II
-  Given an integer array nums that may contain duplicates, return all possible subsets (the power set).
+  Given an integer array nums that may contain duplicates, return all possible
+  subsets (the power set).
   The solution set must not contain duplicate subsets. Return the solution in any order.
 
 Example 1:
@@ -36,4 +38,3 @@ function subsetsWithDup(nums) {
   helper(nums.sort((a, b) => b - a), 0, [], results, false);
   return results;
 }
-
