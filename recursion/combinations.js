@@ -47,4 +47,4 @@ function combine(n, k) {
   const results = [];
   helper(n, k, 1, [], results); // output range is 1+ so we pass i value of 1
   return results;
-};
+}
