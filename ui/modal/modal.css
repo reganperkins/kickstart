@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+}
+
+button {
+  padding: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.btn-primary {
+  border: none;
+  background-color: #74CAC7;
+}
+
+.btn-secondary {
+  background-color: #74CAC7;
+}
+
+.modal-trigger {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%)
+}
+
+.overlay {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  z-index: 10;
+  background-color: #000;
+  transition: visibility 250ms, opacity 250ms ease-in;
+}
+
+.overlay.show {
+  visibility: visible;
+  opacity: 0.4;
+}
+
+.modal {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  background-color: #fff;
+  z-index: 10;
+  opacity: 0;
+  transition: visibility 250ms, opacity 100ms 100ms;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .modal {
+    max-width: 600px;
+    height: initial;
+  }
+}
+
+.modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-topbar {
+  display: flex;
+  justify-content: end;
+}
+
+.close-modal {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.relative-center {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+}

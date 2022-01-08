@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./modal.css"/>
+    <title>Kickstart Modal Demo</title>
+  </head>
+  <body>
+    <button type="button" class="js-open-modal modal-trigger btn-primary">Click to confirm</button>
+    <div class="js-overlay js-close overlay"></div>
+    <div class="js-modal modal" role="dialog">
+      <div class="modal-topbar">
+        <span class="js-close close-modal">&times;</span>
+      </div>
+      <h2 class="relative-center">Some modal title</h2>
+      <p>In this Review session we will be reviewing your interview strategy and audits. Please note that you will be able to attend this Review Session as many times as you would like and at any point between now and the end of the support period. We recommend that you attend this session at least once in the next 3 weeks and repeat this session after each onsite to improve interview performance from one interview to the next</p>
+      <p>Signan agreement to confirm selection</p>
+      <button type="button" class="js-submit-modal relative-center">Submit</button>
+    </div>
+    <script type="text/javascript" src="./modal.js"></script>
+  </body>
+</html>

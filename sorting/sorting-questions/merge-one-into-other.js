@@ -21,32 +21,30 @@ Output: arr2 = [1 2 3 4 5 6]
 */
 
 function mergerFirstIntoSecond(arr1, arr2) {
-  let a = arr1.length - 1;
-  let b = arr1.length - 1;
-  let end = arr2.length - 1;
+  let pointer1 = arr1.length - 1;
+  let pointer2 = arr1.length - 1;
+  let currentIndex = arr2.length - 1;
 
-  while (a >= 0 && b >= 0) {
-    if (arr1[a] > arr2[b]) {
-      arr2[end] = arr1[a];
-      a--;
+  while (pointer1 >= 0 && pointer2 >= 0) {
+    if (arr1[pointer1] > arr2[pointer2]) {
+      arr2[currentIndex] = arr1[pointer1];
+      pointer1 -= 1;
     } else {
-      arr2[end] = arr2[b];
-      b--;
+      arr2[currentIndex] = arr2[pointer2];
+      pointer2 -= 1;
     }
-    end--;
+    currentIndex -= 1;
   }
 
-  while (a >= 0) {
-    arr2[end] = arr1[a];
-    end--;
-    a--;
+  while (pointer1 >= 0) {
+    arr2[currentIndex] = arr1[pointer1];
+    currentIndex -= 1;
+    pointer1 -= 1;
   }
 
-  while (b >= 0) {
-    arr2[end] = arr2[b];
-    end--;
-    b--;
+  while (pointer2 >= 0) {
+    arr2[currentIndex] = arr2[pointer2];
+    currentIndex -= 1;
+    pointer2 -= 1;
   }
-
-  return arr2;
 }

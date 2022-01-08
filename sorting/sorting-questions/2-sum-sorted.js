@@ -29,17 +29,17 @@ Constraints:
 */
 
 function pairSumSortedArray(numbers, target) {
-  let a = 0;
-  let b = numbers.length - 1;
+  let start = 0;
+  let end = numbers.length - 1;
 
-  while (a < b) {
-    const sum = numbers[a] + numbers[b];
+  while (start < end) {
+    const sum = numbers[start] + numbers[end];
     if (sum === target) {
-      return [a, b];
-    } else if (sum < target) {
-      a++;
+      return [start, end];
+    } else if (sum > target) {
+      end -= 1;
     } else {
-      b--;
+      start += 1;
     }
   }
 

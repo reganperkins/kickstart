@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+form {
+  max-width: 30rem;
+}
+
+fieldset {
+  padding: 1.3rem 1rem;
+}
+
+.form-item {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+button,
+.form-item {
+  margin-left: 1rem;
+}

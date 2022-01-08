@@ -1,0 +1,14 @@
+.loading-btn {
+  border-radius: 4px;
+  background-color: ;
+}
+
+.loading-indicator {
+  height: 100%;
+  width: 0%;
+  background: red;
+}
+
+.loading-btn-percent {
+  
+}
