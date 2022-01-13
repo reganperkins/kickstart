@@ -1,14 +1,14 @@
 function selectionSort(arr) {
-  for (let i = 0; i < arr.length - 1; i++) {
-    let minIndex = i;
-    for (let j = i + 1; j < arr.length; j++) {
+  for (let index = 0; index < arr.length; index++) {
+    let indexOfSmallestNumber = index;
+    for (let current = index + 1; current < arr.length; current++) {
       // find the ith smallest value
-      if (arr[j] < arr[minIndex]) {
-        minIndex = j;
+      if (arr[current] < arr[indexOfSmallestNumber]) {
+        indexOfSmallestNumber = current;
       }
     }
     // swap the ith index with the index of the ith smallest value
-    [arr[minIndex], arr[i]] = [arr[i], arr[minIndex]];
+    [arr[index], arr[indexOfSmallestNumber]] = [arr[indexOfSmallestNumber], arr[index]];
   }
   return arr;
 }
